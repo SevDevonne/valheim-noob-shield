@@ -1,6 +1,6 @@
 {
   "name": "ValeriusNoobShield",
-  "version_number": "1.0.2",
+  "version_number": "1.0.3",
   "website_url": "",
   "description": "Prevents progression-gated creatures and raids from spawning more than 2 tiers below their native biome.",
   "dependencies": [

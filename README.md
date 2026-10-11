@@ -81,13 +81,9 @@ Logs for spawns with the prefab name "projectile_FimbulvinterMeteor" are suppres
 ```
 
 ---
+## Git 
 
-## Compatibility
-
-**Valheim:** `1.0.x`
-**Dependency:** `BepInEx`
-
-Compatible with most other mods.
+The project is available on Github at `https://github.com/SevDevonne/valheim-noob-shield`
 
 ---
 
@@ -111,6 +107,4 @@ No incompatibilities found so far.
 
 ## Current Issues & Shortcomings
 
-* Not fully tested with certain Deep North content.
-* Not tested with very long play sessions yet.
 * Not tested with mods that add creatures or modify existing creature properties.
