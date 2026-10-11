@@ -2,7 +2,12 @@ $ErrorActionPreference = "Stop"
 
 $ProjectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $PackageName = "ValeriusNoobShield"
-$Version = "1.0.2"
+$Version = "1.0.3"
+
+$ManifestPath = Join-Path $ProjectRoot "manifest.json"
+$Manifest = Get-Content $ManifestPath -Raw | ConvertFrom-Json
+$Manifest.version_number = $Version
+$Manifest | ConvertTo-Json -Depth 10 | Set-Content $ManifestPath -Encoding utf8
 
 $Dist = Join-Path $ProjectRoot "dist"
 $Package = Join-Path $Dist "$PackageName-$Version"

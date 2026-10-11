@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.3
+- Add project to git repo
+
 ## 1.0.2
 - Add raid suppression to prevent raid text with no spawns.
 

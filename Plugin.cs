@@ -9,7 +9,7 @@ public class Plugin : BaseUnityPlugin
 {
     public const string PluginGuid = "com.valheim.valeriusnoobshield";
     public const string PluginName = "Valerius Noob Shield";
-    public const string PluginVersion = "1.0.2";
+    public const string PluginVersion = "1.0.3";
 
     // A creature may spawn up to this many biome tiers
     // below its native biome.
