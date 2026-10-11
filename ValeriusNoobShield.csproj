@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+
+    <AssemblyName>ValeriusNoobShield</AssemblyName>
+    <RootNamespace>ValeriusNoobShield</RootNamespace>
+
+    <!-- Deploy Release builds to the local modtest profile by default. -->
+    <DeployToModTest>true</DeployToModTest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Valheim -->
+    <Reference Include="assembly_valheim">
+      <HintPath>D:\SteamLibrary\steamapps\common\Valheim\Valheim_Data\Managed\assembly_valheim.dll</HintPath>
+    </Reference>
+
+    <Reference Include="UnityEngine">
+      <HintPath>D:\SteamLibrary\steamapps\common\Valheim\Valheim_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Dev\valheim-expand_world_data\Libs\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+
+    <!-- BepInEx / Harmony -->
+    <Reference Include="BepInEx">
+      <HintPath>C:\Users\Sev\AppData\Roaming\com.kesomannen.gale\valheim\profiles\Default\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+
+    <Reference Include="0Harmony">
+      <HintPath>C:\Users\Sev\AppData\Roaming\com.kesomannen.gale\valheim\profiles\Default\BepInEx\core\0Harmony.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Development convenience: deploy Release builds directly to the test profile. -->
+  <Target Name="CopyToValheimPlugins"
+          AfterTargets="Build"
+          Condition="'$(Configuration)' == 'Release' and '$(DeployToModTest)' == 'true'">
+
+    <Copy
+      SourceFiles="$(TargetPath)"
+      DestinationFolder="C:\Users\Sev\AppData\Roaming\com.kesomannen.gale\valheim\profiles\modtest\BepInEx\plugins" />
+
+  </Target>
+
+</Project>

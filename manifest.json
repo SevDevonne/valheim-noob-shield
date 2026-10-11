@@ -1,0 +1,9 @@
+{
+  "name": "ValeriusNoobShield",
+  "version_number": "1.0.2",
+  "website_url": "",
+  "description": "Prevents progression-gated creatures and raids from spawning more than 2 tiers below their native biome.",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.2351"
+  ]
+}
